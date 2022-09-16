@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: aquamarine;
   }
 
   .heading {
@@ -27,7 +27,7 @@
   .card{
     height:300px;
     width: 300px;
-    background-color: brown;
+    background-color: plum;
     margin: 10px;
     border-radius: 10px;
     display: grid;
@@ -37,11 +37,11 @@
   }
 
   .card.clicked {
-    background-color: aquamarine;
+    background-color: orange;
   }
 
   .card.checked {
-    background-color: green;
+    background-color: lightgreen;
   }
 
   
@@ -56,10 +56,7 @@
     transition: 0.3s all ease;
   }
   
-  .card.checked {
-    background-color: lightgreen;
-  }
-  
+
   .card.clicked img,
   .card.checked img {
     opacity: 1;
