@@ -5,6 +5,12 @@
     background-color: gray;
   }
 
+  .heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight:bold;
+  }
+
   .container{
     display: grid;
     place-items: center;
@@ -19,8 +25,8 @@
   }
 
   .card{
-    height: 200px;
-    width: 200px;
+    height:300px;
+    width: 300px;
     background-color: brown;
     margin: 10px;
     border-radius: 10px;
@@ -29,23 +35,38 @@
     cursor: pointer;
     transition: all 0.8s ease;
   }
-  .front{
-    backface-visibility: hidden;
-    color: red;
-  }
-  .back{
-    backface-visibility: hidden;
-    color: green;
-    transform: rotateY(180);
-  }
-  .flip{
-    transform: rotateY(180);
+
+  .card.clicked {
+    background-color: aquamarine;
   }
 
-
-
-
-
+  .card.checked {
+    background-color: green;
+  }
 
   
+  .card:hover {
+    transform: scale(1.2);
+  }
   
+  .card img {
+    width: 80%;
+    max-height: 100%;
+    opacity: 0;
+    transition: 0.3s all ease;
+  }
+  
+  .card.checked {
+    background-color: lightgreen;
+  }
+  
+  .card.clicked img,
+  .card.checked img {
+    opacity: 1;
+  }
+  
+  .card.shake {
+    background-color: #f15f5f;
+    animation: shake 0.5s;
+  }
+ 
