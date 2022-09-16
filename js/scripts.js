@@ -11,7 +11,7 @@ cards.forEach((card) => {
     // changing card styling upon clicking
     card.classList.add("clicked");
     // checking the number of selected cards
-    if (counter === 0) {
+    if (counter == 0) {
       firstSelection = card.getAttribute("lang");
       counter++;
     } 
@@ -19,7 +19,7 @@ cards.forEach((card) => {
       secondSelection = card.getAttribute("lang");
       counter = 0;
       // checking if the chosen images are the same 
-      if (firstSelection === secondSelection) {
+      if (firstSelection == secondSelection) {
         const correctCards = document.querySelectorAll(
           ".card[lang='" + firstSelection + "']"
         );
@@ -28,7 +28,7 @@ cards.forEach((card) => {
         correctCards[0].classList.remove("clicked");
         correctCards[1].classList.add("checked");
         correctCards[1].classList.remove("clicked");
-        // scoring in crementation in case of match
+        // scoring incrementation in case of match
         scoring += 1;
         score.innerHTML="Your score is : "+scoring;
       } 
