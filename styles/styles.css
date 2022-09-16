@@ -4,3 +4,20 @@
     box-sizing: border-box;
     background-color: gray;
   }
+
+  .container{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+  }
+  .colomn{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card{
+    height: 20vh;
+    width: 20vw;
+    background-color: brown;
+    margin: 10px;
+  }
