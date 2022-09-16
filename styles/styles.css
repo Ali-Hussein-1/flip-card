@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: aquamarine;
+    background-color: lightgrey;
   }
 
   .heading {
@@ -37,7 +37,7 @@
   }
 
   .card.clicked {
-    background-color: orange;
+    background-color: green;
   }
 
   .card.checked {
@@ -63,7 +63,7 @@
   }
   
   .card.shake {
-    background-color: #f15f5f;
+    background-color: red;
     animation: shake 0.5s;
   }
  

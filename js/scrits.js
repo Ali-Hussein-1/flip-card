@@ -1,8 +1,9 @@
 // Initializing selection
 let counter = 0;
+let scoring =0; 
 let firstSelection = "";
 let secondSelection = "";
-
+let score = document.getElementById("score");
 const cards = document.querySelectorAll(".cards .card");
 cards.forEach((card) => {
   // addding an event upon clicking 
@@ -27,12 +28,18 @@ cards.forEach((card) => {
         correctCards[0].classList.remove("clicked");
         correctCards[1].classList.add("checked");
         correctCards[1].classList.remove("clicked");
+        // scoring in crementation in case of match
+        scoring += 1;
+        score.innerHTML="Your score is : "+scoring;
       } 
       else {
         const incorrectCards = document.querySelectorAll(".card.clicked");
         // changing the styling of non-matching cards
         incorrectCards[0].classList.add("shake");
         incorrectCards[1].classList.add("shake");
+        // scoring decrementation in case of unmatch
+        scoring -= 1;
+        score.innerHTML="Your score is : "+scoring;
         // A reset function for non-matching cards
         function reset() {
           incorrectCards[0].classList.remove("shake");
